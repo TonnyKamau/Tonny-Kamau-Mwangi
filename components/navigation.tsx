@@ -72,7 +72,7 @@ export function Navigation() {
             </div>
             <div className="flex flex-col leading-none">
               <span className="tracking-tight font-black text-base">Tonny Kamau</span>
-              <span className="text-[10px] font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest">Implementation Lead</span>
+              <span className="text-[10px] font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest">Implementation Lead • Flutter & Next.js Developer</span>
             </div>
           </div>
 

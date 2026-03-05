@@ -17,10 +17,13 @@ const About = memo(function About() {
             </h2>
             <div className="space-y-6 text-lg text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
               <p>
-                I am a high-impact <span className="text-slate-900 dark:text-white font-black">IT Support & Software Implementation Lead</span> with extensive experience in database architecture, system deployment, and end-to-end technical solutions.
+                I am a high-impact <span className="text-slate-900 dark:text-white font-black">IT Support Professional, Software Implementation Lead & Flutter/Next.js Developer</span> with extensive experience in database architecture, system deployment, and end-to-end technical solutions.
               </p>
               <p>
-                My approach combines deep technical knowledge with a passion for <span className="text-blue-600 dark:text-blue-400 font-bold underline decoration-2 underline-offset-4">premium user experiences</span>. Whether it&apos;s managing complex database clusters or leading the flagship implementation of **KIT-IFMS**, I focus on building systems that are secure, scalable, and intuitive.
+                My approach combines deep technical knowledge with a passion for <span className="text-blue-600 dark:text-blue-400 font-bold underline decoration-2 underline-offset-4">premium user experiences</span>. I specialize in building <span className="text-slate-900 dark:text-white font-black">appealing, scalable, and highly responsive</span> web and cross-platform applications for **Windows and Android**.
+              </p>
+              <p>
+                Whether it&apos;s managing complex database clusters or leading the flagship implementation of **KIT-IFMS**, I focus on delivering useful systems that are secure, scalable, and intuitive across all devices.
               </p>
               <p>
                 Equipped with certifications in Cloud Security and Ethical Hacking, I bring a security-first mindset to every project I undertake.
