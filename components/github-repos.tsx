@@ -148,20 +148,20 @@ const GitHubRepos = memo(function GitHubRepos() {
   if (loading) {
     return (
       <div className="mt-12 md:mt-16">
-        <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-6 md:mb-8 flex items-center gap-2 fade-in-up">
-          <Github className="w-5 h-5 md:w-6 md:h-6 text-slate-700" />
+        <h3 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-6 md:mb-8 flex items-center gap-2 fade-in-up">
+          <Github className="w-5 h-5 md:w-6 md:h-6 text-slate-700 dark:text-slate-300" />
           GitHub Repositories
         </h3>
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {[...Array(6)].map((_, index) => (
-            <Card key={index} className="animate-pulse">
+            <Card key={index} className="animate-pulse bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800">
               <CardHeader className="p-4">
-                <div className="h-4 bg-slate-200 rounded w-3/4 shimmer"></div>
-                <div className="h-3 bg-slate-200 rounded w-1/2 mt-2 shimmer"></div>
+                <div className="h-4 bg-slate-200 dark:bg-slate-800 rounded w-3/4 shimmer"></div>
+                <div className="h-3 bg-slate-200 dark:bg-slate-800 rounded w-1/2 mt-2 shimmer"></div>
               </CardHeader>
               <CardContent className="p-4 pt-0">
-                <div className="h-3 bg-slate-200 rounded w-full mb-2 shimmer"></div>
-                <div className="h-3 bg-slate-200 rounded w-2/3 shimmer"></div>
+                <div className="h-3 bg-slate-200 dark:bg-slate-800 rounded w-full mb-2 shimmer"></div>
+                <div className="h-3 bg-slate-200 dark:bg-slate-800 rounded w-2/3 shimmer"></div>
               </CardContent>
             </Card>
           ))}
@@ -176,10 +176,10 @@ const GitHubRepos = memo(function GitHubRepos() {
   if (error) {
     return (
       <div className="mt-12 md:mt-16">
-        <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-6 md:mb-8 flex items-center gap-2 fade-in-up">
-          <Github className="w-5 h-5 md:w-6 md:h-6 text-slate-700" />
-          GitHub Repositories
-        </h3>
+        <h3 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-6 md:mb-8 flex items-center gap-2 fade-in-up">
+        <Github className="w-5 h-5 md:w-6 md:h-6 text-slate-700 dark:text-slate-300" />
+        GitHub Repositories
+      </h3>
         <Card className="border-red-200 fade-in">
           <CardContent className="p-4 md:p-6 text-center">
             <p className="text-red-600 text-sm md:text-base">Failed to load repositories: {error}</p>
@@ -198,8 +198,8 @@ const GitHubRepos = memo(function GitHubRepos() {
 
   return (
     <div className="mt-12 md:mt-16">
-      <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-6 md:mb-8 flex items-center gap-2 fade-in-up">
-        <Github className="w-5 h-5 md:w-6 md:h-6 text-slate-700" />
+      <h3 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-6 md:mb-8 flex items-center gap-2 fade-in-up">
+        <Github className="w-5 h-5 md:w-6 md:h-6 text-slate-700 dark:text-slate-300" />
         GitHub Repositories
       </h3>
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
@@ -210,8 +210,8 @@ const GitHubRepos = memo(function GitHubRepos() {
           >
             <CardHeader className="p-4 pb-2">
               <div className="flex items-start justify-between">
-                <CardTitle className="text-base md:text-lg flex items-center gap-1.5 truncate pr-2">
-                  <Github className="w-4 h-4 md:w-5 md:h-5 text-slate-600 flex-shrink-0" />
+                <CardTitle className="text-base md:text-lg flex items-center gap-1.5 truncate pr-2 text-slate-900 dark:text-white">
+                  <Github className="w-4 h-4 md:w-5 md:h-5 text-slate-600 dark:text-slate-400 flex-shrink-0" />
                   <span className="truncate">{repo.name}</span>
                 </CardTitle>
                 {repo.language && (
@@ -223,7 +223,7 @@ const GitHubRepos = memo(function GitHubRepos() {
                   </Badge>
                 )}
               </div>
-              <p className="text-slate-600 text-xs md:text-sm leading-relaxed line-clamp-3">{getDescription(repo)}</p>
+              <p className="text-slate-600 dark:text-slate-400 text-xs md:text-sm leading-relaxed line-clamp-3 font-medium">{getDescription(repo)}</p>
               {repo.readme_description && (
                 <Badge variant="secondary" className="text-xs w-fit mt-1 scale-in">
                   📖 From README

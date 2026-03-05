@@ -65,12 +65,12 @@ export function KitIfms() {
   ]
 
   const solutions = [
-    { icon: Users, label: "User Management" },
-    { icon: HandCoins, label: "P2P Lending" },
-    { icon: Globe, label: "Communication Hub" },
-    { icon: Package, label: "Inventory Management" },
-    { icon: Wallet, label: "Chama & Sacco Management" },
-    { icon: LineChart, label: "POS & Analytics" }
+    { icon: Users, label: "User Management", accent: "text-emerald-500", bg: "bg-emerald-500/10" },
+    { icon: HandCoins, label: "P2P Lending", accent: "text-blue-500", bg: "bg-blue-500/10" },
+    { icon: Globe, label: "Communication Hub", accent: "text-indigo-500", bg: "bg-indigo-500/10" },
+    { icon: Package, label: "Inventory Management", accent: "text-orange-500", bg: "bg-orange-500/10" },
+    { icon: Wallet, label: "Chama & Sacco Management", accent: "text-violet-500", bg: "bg-violet-500/10" },
+    { icon: LineChart, label: "POS & Analytics", accent: "text-rose-500", bg: "bg-rose-500/10" }
   ]
 
   return (
@@ -108,11 +108,11 @@ export function KitIfms() {
               <h3 className="text-3xl font-black text-slate-900 dark:text-white mb-8">Solving Africa&apos;s Financial Challenges</h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
                 {solutions.map((item, i) => (
-                  <div key={i} className="flex flex-col items-center text-center gap-3">
-                    <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
-                      <item.icon className="w-6 h-6 text-slate-400" />
+                  <div key={i} className="flex flex-col items-center text-center gap-3 group">
+                    <div className={`p-4 rounded-2xl ${item.bg} border border-transparent group-hover:border-slate-200 dark:group-hover:border-white/10 transition-all duration-300`}>
+                      <item.icon className={`w-6 h-6 ${item.accent}`} />
                     </div>
-                    <span className="text-xs font-bold text-slate-500 leading-tight">{item.label}</span>
+                    <span className="text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest">{item.label}</span>
                   </div>
                 ))}
               </div>
