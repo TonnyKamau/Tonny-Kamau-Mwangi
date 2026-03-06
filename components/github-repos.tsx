@@ -223,7 +223,7 @@ const GitHubRepos = memo(function GitHubRepos() {
                   </Badge>
                 )}
               </div>
-              <p className="text-slate-600 dark:text-slate-400 text-xs md:text-sm leading-relaxed line-clamp-3 font-medium">{getDescription(repo)}</p>
+              <p className="text-slate-600 dark:text-slate-300 text-xs md:text-sm leading-relaxed line-clamp-3 font-medium">{getDescription(repo)}</p>
               {repo.readme_description && (
                 <Badge variant="secondary" className="text-xs w-fit mt-1 scale-in">
                   📖 From README
@@ -244,7 +244,7 @@ const GitHubRepos = memo(function GitHubRepos() {
               )}
             </CardHeader>
             <CardContent className="p-4 pt-2">
-              <div className="flex items-center justify-between text-xs text-slate-500 mb-3">
+              <div className="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 mb-3">
                 <div className="flex items-center gap-3">
                   <span className="flex items-center gap-1 hover-scale">
                     <Star className="w-3 h-3" />
@@ -260,7 +260,7 @@ const GitHubRepos = memo(function GitHubRepos() {
                   </span>
                 </div>
               </div>
-              <p className="text-xs text-slate-500 mb-3">Updated {formatDate(repo.updated_at)}</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mb-3">Updated {formatDate(repo.updated_at)}</p>
               <div className="flex flex-wrap gap-2">
                 <Button
                   size="sm"
