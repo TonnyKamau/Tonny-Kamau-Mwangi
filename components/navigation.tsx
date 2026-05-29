@@ -18,113 +18,119 @@ export function Navigation() {
       for (const section of sections) {
         const element = document.getElementById(section)
         if (element) {
-          const offsetTop = element.offsetTop
-          const offsetBottom = offsetTop + element.offsetHeight
-
-          if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
+          const { offsetTop, offsetHeight } = element
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
             setActiveSection(section)
             break
           }
         }
       }
 
-      if (window.scrollY > 10) {
-        setScrolled(true)
-      } else {
-        setScrolled(false)
-      }
+      setScrolled(window.scrollY > 10)
     }
 
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" })
     setIsOpen(false)
   }
 
   const navItems = [
-    { id: "home", label: "Home" },
-    { id: "about", label: "About" },
-    { id: "resume", label: "Resume" },
-    { id: "projects", label: "Projects" },
+    { id: "home",           label: "Home"           },
+    { id: "about",          label: "About"          },
+    { id: "resume",         label: "Resume"         },
+    { id: "projects",       label: "Projects"       },
     { id: "lab-challenges", label: "Lab Challenges" },
-    { id: "contact", label: "Contact" },
+    { id: "contact",        label: "Contact"        },
   ]
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled 
-          ? "bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-lg border-b border-slate-200/50 dark:border-slate-800/50 py-2" 
-          : "bg-transparent py-4"
+        scrolled
+          ? "bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-md border-b border-emerald-100/50 dark:border-emerald-900/30 py-2"
+          : "bg-transparent py-3"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-14 sm:h-16">
-          <div className="flex items-center gap-3 font-bold text-lg sm:text-xl text-slate-900 dark:text-white group cursor-pointer" onClick={() => scrollToSection('home')}>
-            <div className={`w-10 h-10 rounded-xl transition-all duration-500 flex items-center justify-center overflow-hidden ${scrolled ? "bg-blue-600 shadow-lg shadow-blue-500/20" : "bg-white/10 backdrop-blur-md border border-white/20"}`}>
-              <img src="/favicon.png" alt="Tonny Kamau Logo" className="w-full h-full object-cover" />
+        <div className="flex items-center justify-between h-14">
+
+          {/* Logo */}
+          <div
+            className="flex items-center gap-2.5 cursor-pointer shrink-0"
+            onClick={() => scrollToSection("home")}
+          >
+            <div
+              className={`w-9 h-9 rounded-xl transition-all duration-500 flex items-center justify-center overflow-hidden shrink-0 ${
+                scrolled
+                  ? "bg-emerald-600 shadow-lg shadow-emerald-500/20"
+                  : "bg-white/10 backdrop-blur-md border border-white/20"
+              }`}
+            >
+              <img src="/favicon.png" alt="Logo" className="w-full h-full object-cover" />
             </div>
             <div className="flex flex-col leading-none">
-              <span className="tracking-tight font-black text-base">Tonny Kamau</span>
-              <span className="text-[10px] font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest">Implementation Lead • Flutter & Next.js Developer</span>
+              <span className="tracking-tight font-black text-sm sm:text-base text-slate-900 dark:text-white">
+                Tonny Kamau
+              </span>
+              <span className="hidden sm:block text-[9px] font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest">
+                Greener Earth • Flutter &amp; Next.js
+              </span>
             </div>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-2">
+          {/* Desktop nav */}
+          <div className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`relative px-4 py-2 text-sm font-bold transition-all duration-300 rounded-full ${
-                  activeSection === item.id 
-                    ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30" 
-                    : "text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-100/50 dark:hover:bg-slate-800/50"
+                className={`relative px-3 py-2 text-sm font-bold rounded-full transition-all duration-300 ${
+                  activeSection === item.id
+                    ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/30"
+                    : "text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-slate-100/50 dark:hover:bg-slate-800/50"
                 }`}
               >
                 {item.label}
                 {activeSection === item.id && (
-                  <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-blue-600 rounded-full" />
+                  <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-emerald-600 rounded-full" />
                 )}
               </button>
             ))}
-            <div className="ml-4 pl-4 border-l border-slate-200 dark:border-slate-800">
+            <div className="ml-2 pl-3 border-l border-slate-200 dark:border-slate-800">
               <ModeToggle />
             </div>
           </div>
 
-          {/* Mobile Navigation Button */}
+          {/* Mobile controls */}
           <div className="flex lg:hidden items-center gap-2">
             <ModeToggle />
             <Button
               variant="ghost"
               size="sm"
-              className="p-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800"
+              className="w-9 h-9 p-0 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </Button>
           </div>
         </div>
 
-        {/* Mobile Navigation Menu */}
+        {/* Mobile menu */}
         {isOpen && (
-          <div className="lg:hidden mt-4 glass rounded-3xl p-4 animate-fade-in">
-            <div className="flex flex-col gap-2">
+          <div className="lg:hidden mt-2 glass rounded-2xl p-3 animate-fade-in shadow-xl">
+            <div className="flex flex-col gap-1">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-left px-4 py-3 text-sm font-bold rounded-2xl transition-all ${
-                    activeSection === item.id 
-                      ? "text-blue-600 bg-blue-50 dark:bg-blue-900/30" 
+                  className={`text-left px-4 py-2.5 text-sm font-bold rounded-xl transition-all ${
+                    activeSection === item.id
+                      ? "text-emerald-600 bg-emerald-50 dark:bg-emerald-900/30"
                       : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800"
                   }`}
                 >

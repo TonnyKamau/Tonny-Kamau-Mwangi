@@ -10,7 +10,7 @@ import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white dark:bg-slate-950">
+    <main className="min-h-screen w-full overflow-x-hidden bg-white dark:bg-slate-950">
       <Navigation />
       <Hero />
       <KitIfms />

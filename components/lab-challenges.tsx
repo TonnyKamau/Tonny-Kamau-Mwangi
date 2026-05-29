@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge"
 import { Target, PenToolIcon as Tool, Lightbulb, FileText } from "lucide-react"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
+import { ScrollReveal } from "@/components/scroll-reveal"
 
 export function LabChallenges() {
   const [expandedChallenge, setExpandedChallenge] = useState<number | null>(null)
@@ -18,7 +19,7 @@ export function LabChallenges() {
       title: "Cisco Packet Tracer OSI Analysis",
       category: "Networking",
       difficulty: "Beginner",
-      accent: "text-blue-500",
+      accent: "text-emerald-500",
       problem: "Examine TCP/IP and OSI models in action by creating a network topology and analyzing real-time protocol flow.",
       tools: ["Packet Tracer", "CLI", "Protocol Analysis"]
     },
@@ -42,7 +43,7 @@ export function LabChallenges() {
       title: "DNS In-Depth Exploration",
       category: "Protocols",
       difficulty: "Beginner",
-      accent: "text-indigo-500",
+      accent: "text-teal-500",
       problem: "Detailed analysis of DNS hierarchy, record types, and security vulnerabilities like DNS tunneling.",
       tools: ["dig", "nslookup", "TryHackMe"]
     },
@@ -59,18 +60,17 @@ export function LabChallenges() {
   return (
     <section id="lab-challenges" className="section-padding bg-white dark:bg-slate-950">
       <div className="responsive-container">
-        <div className="text-center mb-20 animate-fade-in-up">
+        <ScrollReveal variant="fade-up" className="text-center mb-20">
           <Badge className="mb-4 bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400 border-none font-bold px-4 py-1">Cyber Labs & CTFs</Badge>
           <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-6">Security <span className="text-emerald-500">Challenges</span></h2>
           <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto font-medium">Hands-on experience in networking, penetration testing, and forensic analysis.</p>
-        </div>
+        </ScrollReveal>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {challenges.map((challenge, i) => (
-            <div 
-              key={i} 
-              className="group cursor-pointer mobile-card p-6 hover-glow animate-fade-in-up" 
-              style={{ animationDelay: `${i * 0.1}s` }}
+            <ScrollReveal key={i} variant="fade-up" delay={i * 80}>
+            <div
+              className="group cursor-pointer mobile-card p-6 hover-glow"
               onClick={() => toggleExpand(i)}
             >
               <div className="flex items-center justify-between mb-6">
@@ -79,7 +79,7 @@ export function LabChallenges() {
                   <Target className={`w-4 h-4 ${challenge.accent}`} />
                 </div>
               </div>
-              <h3 className="text-lg font-black text-slate-900 dark:text-white mb-2 leading-tight group-hover:text-blue-500 transition-colors">{challenge.title}</h3>
+              <h3 className="text-lg font-black text-slate-900 dark:text-white mb-2 leading-tight group-hover:text-emerald-600 transition-colors">{challenge.title}</h3>
               <p className={`text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed transition-all duration-500 ${expandedChallenge === i ? "max-h-96 opacity-100" : "max-h-24 opacity-100"}`}>
                 {challenge.problem}
               </p>
@@ -90,6 +90,7 @@ export function LabChallenges() {
                 ))}
               </div>
             </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

@@ -3,13 +3,13 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { 
-  TrendingUp, 
-  ShieldCheck, 
-  Users, 
-  MessageSquare, 
-  Wallet, 
-  Send, 
+import {
+  TrendingUp,
+  ShieldCheck,
+  Users,
+  MessageSquare,
+  Wallet,
+  Send,
   ArrowRight,
   Database,
   HandCoins,
@@ -17,6 +17,7 @@ import {
   LineChart,
   Globe
 } from "lucide-react"
+import { ScrollReveal } from "@/components/scroll-reveal"
 
 export function KitIfms() {
   const features = [
@@ -31,15 +32,15 @@ export function KitIfms() {
       title: "P2P Lending",
       description: "Direct lending between members with secure, flexible repayment terms and tracking.",
       icon: HandCoins,
-      accent: "text-blue-500",
-      bg: "bg-blue-500/10"
+      accent: "text-green-500",
+      bg: "bg-green-500/10"
     },
     {
       title: "Inventory & POS",
       description: "Integrated point-of-sale and stock management for SMEs and cooperative traders.",
       icon: Package,
-      accent: "text-indigo-500",
-      bg: "bg-indigo-500/10"
+      accent: "text-teal-500",
+      bg: "bg-teal-500/10"
     },
     {
       title: "Financial Messaging",
@@ -66,8 +67,8 @@ export function KitIfms() {
 
   const solutions = [
     { icon: Users, label: "User Management", accent: "text-emerald-500", bg: "bg-emerald-500/10" },
-    { icon: HandCoins, label: "P2P Lending", accent: "text-blue-500", bg: "bg-blue-500/10" },
-    { icon: Globe, label: "Communication Hub", accent: "text-indigo-500", bg: "bg-indigo-500/10" },
+    { icon: HandCoins, label: "P2P Lending", accent: "text-green-500", bg: "bg-green-500/10" },
+    { icon: Globe, label: "Communication Hub", accent: "text-teal-500", bg: "bg-teal-500/10" },
     { icon: Package, label: "Inventory Management", accent: "text-orange-500", bg: "bg-orange-500/10" },
     { icon: Wallet, label: "Chama & Sacco Management", accent: "text-violet-500", bg: "bg-violet-500/10" },
     { icon: LineChart, label: "POS & Analytics", accent: "text-rose-500", bg: "bg-rose-500/10" }
@@ -76,20 +77,21 @@ export function KitIfms() {
   return (
     <section id="features" className="section-padding bg-white dark:bg-slate-950">
       <div className="responsive-container">
-        <div className="text-center mb-20 animate-fade-in-up">
+        <ScrollReveal variant="fade-up" className="text-center mb-20">
           <Badge className="mb-4 bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400 border-none font-bold px-4 py-1">Experience KIT-IFMS</Badge>
-          <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white mb-6 leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-6 leading-tight">
             Comprehensive <br /><span className="text-emerald-500">Financial Ecosystem</span>
           </h2>
           <p className="text-xl text-slate-700 dark:text-slate-300 max-w-2xl mx-auto font-medium">
             See how our platform transforms financial management for African businesses, saccos, and informal sector players.
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Feature Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {features.map((feature, i) => (
-            <Card key={i} className="glass border-none rounded-[2rem] p-8 hover-glow group transition-all duration-500 animate-fade-in-up" style={{ animationDelay: `${i * 0.1}s` }}>
+            <ScrollReveal key={i} variant="fade-up" delay={i * 70}>
+            <Card className="glass border-none rounded-2xl sm:rounded-[2rem] p-5 sm:p-8 hover-glow group transition-all duration-500 h-full">
               <div className={`w-14 h-14 rounded-2xl ${feature.bg} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500`}>
                 <feature.icon className={`w-7 h-7 ${feature.accent}`} />
               </div>
@@ -98,11 +100,12 @@ export function KitIfms() {
                 {feature.description}
               </p>
             </Card>
+            </ScrollReveal>
           ))}
         </div>
 
         {/* Stats & Solutions */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="space-y-12 animate-fade-in-up">
             <div>
               <h3 className="text-3xl font-black text-slate-900 dark:text-white mb-8">Solving Africa&apos;s Financial Challenges</h3>
@@ -134,7 +137,7 @@ export function KitIfms() {
 
           <div className="relative animate-fade-in-up stagger-3">
             <div className="absolute inset-0 bg-emerald-500/20 blur-[100px] animate-pulse" />
-            <div className="relative glass rounded-[2.5rem] p-10 border-white/40 shadow-2xl overflow-hidden group">
+            <div className="relative glass rounded-2xl sm:rounded-[2.5rem] p-5 sm:p-8 md:p-10 border-white/40 shadow-2xl overflow-hidden group">
               <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl -mr-16 -mt-16 group-hover:scale-150 transition-all duration-700" />
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-12 h-12 rounded-xl bg-emerald-500 flex items-center justify-center text-white shadow-lg shadow-emerald-500/30">

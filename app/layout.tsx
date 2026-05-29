@@ -1,15 +1,20 @@
 import type React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
   title: "Tonny Kamau Mwangi",
-  description: "Professional portfolio of Tonny Kamau Mwangi - IT Support Professional, Software Developer, Flutter & Next.js Expert",
-  generator: "v0.dev",
+  description: "Professional portfolio of Tonny Kamau Mwangi - Software Developer & Implementation Lead at Greener Earth Foundation",
   icons: {
     icon: "/favicon.png",
   },
+}
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 }
 
 export default function RootLayout({
