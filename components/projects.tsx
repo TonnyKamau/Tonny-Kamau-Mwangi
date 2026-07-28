@@ -18,7 +18,7 @@ const greenerEarthProjects = [
     accent: "from-emerald-500 to-teal-500",
   },
   {
-    title: "NutriNest Kitchen",
+    title: "PikaNini",
     description: "Helps users make informed food choices through meal intelligence and budget-aware recommendations while reducing food waste.",
     technologies: ["React", "Node.js", "AI/ML"],
     status: "live",
@@ -26,25 +26,11 @@ const greenerEarthProjects = [
     accent: "from-green-500 to-emerald-500",
   },
   {
-    title: "Greener Farm Intelligence",
-    description: "Agricultural productivity platform leveraging smart data to help farmers optimize yields and reduce resource waste.",
-    technologies: ["Python", "ML", "Flutter"],
-    status: "in-dev",
-    accent: "from-lime-500 to-green-500",
-  },
-  {
     title: "Exora",
     description: "Productivity and discipline-building platform to help individuals stay focused and achieve long-term goals.",
     technologies: ["Flutter", "Firebase"],
     status: "coming-soon",
     accent: "from-teal-500 to-cyan-500",
-  },
-  {
-    title: "EchoTrail",
-    description: "Tourism and cultural discovery experiences — connecting travellers with authentic local stories and destinations.",
-    technologies: ["React Native", "Maps API"],
-    status: "coming-soon",
-    accent: "from-emerald-400 to-green-500",
   },
   {
     title: "Universal Folder",
@@ -59,13 +45,6 @@ const greenerEarthProjects = [
     technologies: ["Flutter", "Health APIs"],
     status: "coming-soon",
     accent: "from-yellow-400 to-lime-500",
-  },
-  {
-    title: "MelaScan",
-    description: "Intelligent skin analysis platform using computer vision for early detection and wellness insights.",
-    technologies: ["Python", "OpenCV", "ML", "Flutter"],
-    status: "coming-soon",
-    accent: "from-rose-400 to-pink-500",
   },
   {
     title: "VisionStudy",
@@ -148,34 +127,34 @@ const Projects = memo(function Projects() {
               const status = statusConfig[project.status as keyof typeof statusConfig]
               return (
                 <ScrollReveal key={i} variant="fade-up" delay={i * 60}>
-                <div
-                  className="group relative mobile-card overflow-hidden hover-glow h-full"
-                >
-                  <div className={`absolute top-0 right-0 w-28 h-28 bg-gradient-to-br ${project.accent} opacity-10 rounded-full blur-3xl -mr-14 -mt-14 group-hover:scale-150 transition-transform duration-700`} />
-                  <div className="relative z-10 h-full flex flex-col">
-                    <div className="flex items-center justify-between mb-4">
-                      <Badge className={`${status.color} border-none text-[10px] font-bold uppercase tracking-wide`}>
-                        {status.label}
-                      </Badge>
-                      {project.status === "live" && project.link ? (
-                        <a href={project.link} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="w-4 h-4 text-emerald-500 hover:text-emerald-700 transition-colors" />
-                        </a>
-                      ) : (
-                        <Clock className="w-4 h-4 text-slate-300" />
-                      )}
-                    </div>
-                    <h3 className="text-lg font-black text-slate-900 dark:text-white mb-2">{project.title}</h3>
-                    <p className="text-slate-600 dark:text-slate-300 text-sm font-medium leading-relaxed mb-4 flex-grow">{project.description}</p>
-                    <div className="flex flex-wrap gap-1.5 mt-auto">
-                      {project.technologies.map((tech) => (
-                        <Badge key={tech} variant="secondary" className="bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300 text-[9px] uppercase font-bold tracking-tight border-none">
-                          {tech}
+                  <div
+                    className="group relative mobile-card overflow-hidden hover-glow h-full"
+                  >
+                    <div className={`absolute top-0 right-0 w-28 h-28 bg-gradient-to-br ${project.accent} opacity-10 rounded-full blur-3xl -mr-14 -mt-14 group-hover:scale-150 transition-transform duration-700`} />
+                    <div className="relative z-10 h-full flex flex-col">
+                      <div className="flex items-center justify-between mb-4">
+                        <Badge className={`${status.color} border-none text-[10px] font-bold uppercase tracking-wide`}>
+                          {status.label}
                         </Badge>
-                      ))}
+                        {project.status === "live" && project.link ? (
+                          <a href={project.link} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="w-4 h-4 text-emerald-500 hover:text-emerald-700 transition-colors" />
+                          </a>
+                        ) : (
+                          <Clock className="w-4 h-4 text-slate-300" />
+                        )}
+                      </div>
+                      <h3 className="text-lg font-black text-slate-900 dark:text-white mb-2">{project.title}</h3>
+                      <p className="text-slate-600 dark:text-slate-300 text-sm font-medium leading-relaxed mb-4 flex-grow">{project.description}</p>
+                      <div className="flex flex-wrap gap-1.5 mt-auto">
+                        {project.technologies.map((tech) => (
+                          <Badge key={tech} variant="secondary" className="bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300 text-[9px] uppercase font-bold tracking-tight border-none">
+                            {tech}
+                          </Badge>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
                 </ScrollReveal>
               )
             })}
@@ -194,25 +173,25 @@ const Projects = memo(function Projects() {
           <div className="grid sm:grid-cols-3 gap-6">
             {completedProjects.map((project, i) => (
               <ScrollReveal key={i} variant="zoom-in" delay={i * 100}>
-              <Card className="glass border-none rounded-3xl p-6 hover-glow h-full">
-                <div className="flex items-start justify-between mb-6">
-                  <div className={`w-12 h-12 rounded-2xl ${project.accent} flex items-center justify-center text-white shadow-lg`}>
-                    <Rocket className="w-6 h-6" />
+                <Card className="glass border-none rounded-3xl p-6 hover-glow h-full">
+                  <div className="flex items-start justify-between mb-6">
+                    <div className={`w-12 h-12 rounded-2xl ${project.accent} flex items-center justify-center text-white shadow-lg`}>
+                      <Rocket className="w-6 h-6" />
+                    </div>
+                    <Button variant="ghost" size="icon" className="rounded-full" asChild>
+                      <a href={project.github} target="_blank" rel="noopener noreferrer">
+                        <Github className="w-5 h-5" />
+                      </a>
+                    </Button>
                   </div>
-                  <Button variant="ghost" size="icon" className="rounded-full" asChild>
-                    <a href={project.github} target="_blank" rel="noopener noreferrer">
-                      <Github className="w-5 h-5" />
-                    </a>
-                  </Button>
-                </div>
-                <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{project.title}</h4>
-                <p className="text-slate-600 dark:text-slate-300 text-xs font-medium leading-relaxed mb-6">{project.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech) => (
-                    <span key={tech} className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{tech}</span>
-                  ))}
-                </div>
-              </Card>
+                  <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{project.title}</h4>
+                  <p className="text-slate-600 dark:text-slate-300 text-xs font-medium leading-relaxed mb-6">{project.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech) => (
+                      <span key={tech} className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{tech}</span>
+                    ))}
+                  </div>
+                </Card>
               </ScrollReveal>
             ))}
           </div>
