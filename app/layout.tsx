@@ -4,8 +4,8 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
-  title: "Tonny Kamau Mwangi",
-  description: "Professional portfolio of Tonny Kamau Mwangi - Software Developer & Implementation Lead at Greener Earth Foundation",
+  title: "Tonny Kamau Mwangi — Software Engineer & Implementation Lead",
+  description: "Tonny Kamau Mwangi builds purposeful digital products across fintech, climate and public-good technology.",
   icons: {
     icon: "/favicon.png",
   },
