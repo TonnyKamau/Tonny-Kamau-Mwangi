@@ -77,7 +77,7 @@ export function Navigation() {
                 Tonny Kamau
               </span>
               <span className="hidden sm:block text-[9px] font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest">
-                Greener Earth • Flutter &amp; Next.js
+                Greenon • Flutter &amp; Next.js
               </span>
             </div>
           </div>

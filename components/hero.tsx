@@ -38,10 +38,10 @@ export function Hero() {
             {/* Badges */}
             <ScrollReveal variant="fade-up" delay={0}>
               <div className="flex flex-wrap items-center gap-2">
-                <a href="https://greener-earth.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <a href="https://greenon.online/" target="_blank" rel="noopener noreferrer">
                   <Badge variant="outline" className="px-2.5 py-1 text-[10px] bg-emerald-50/80 border-emerald-300 text-emerald-700 dark:bg-emerald-900/30 dark:border-emerald-700 dark:text-emerald-300 font-bold uppercase tracking-wider flex items-center gap-1 hover:bg-emerald-100 transition-colors cursor-pointer">
                     <Leaf className="w-2.5 h-2.5" />
-                    Greener Earth Foundation
+                    Greenon
                     <ExternalLink className="w-2.5 h-2.5 opacity-60" />
                   </Badge>
                 </a>
@@ -90,8 +90,8 @@ export function Hero() {
             <ScrollReveal variant="fade-up" delay={320}>
               <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed">
                 I am <strong className="text-slate-900 dark:text-white font-black">Tonny Kamau</strong>, a software developer &amp; implementation lead at{" "}
-                <a href="https://greener-earth.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 dark:text-emerald-400 font-black underline decoration-2 underline-offset-4 hover:text-emerald-700 transition-colors">
-                  Greener Earth Foundation
+                <a href="https://greenon.online/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 dark:text-emerald-400 font-black underline decoration-2 underline-offset-4 hover:text-emerald-700 transition-colors">
+                  Greenon
                 </a>
                 , building digital products that restore balance through technology.
               </p>
@@ -162,7 +162,7 @@ export function Hero() {
                 </div>
                 <div className="bg-emerald-50/70 dark:bg-emerald-900/30 px-3 py-1 rounded-full text-[9px] font-bold tracking-widest text-emerald-700 dark:text-emerald-300 flex items-center gap-1">
                   <Leaf className="w-2.5 h-2.5" />
-                  GREENER EARTH ECOSYSTEM
+                  GREENON ECOSYSTEM
                 </div>
               </div>
 
@@ -172,12 +172,15 @@ export function Hero() {
 
               <div className="grid grid-cols-2 gap-2 mb-5">
                 {[
-                  { name: "KIT-IFMS",  status: "Live", color: "bg-emerald-500" },
-                  { name: "NutriNest", status: "Live", color: "bg-green-500"   },
-                  { name: "Exora",     status: "Soon", color: "bg-teal-400"    },
-                  { name: "EchoTrail", status: "Soon", color: "bg-emerald-400" },
-                  { name: "Rayzen",    status: "Soon", color: "bg-lime-500"    },
-                  { name: "MelaScan",  status: "Soon", color: "bg-green-400"   },
+                  { name: "KIT IFMS",         status: "Live",     color: "bg-emerald-500" },
+                  { name: "PikaNini",         status: "Live",     color: "bg-green-500"   },
+                  { name: "Exora",            status: "Live",     color: "bg-teal-400"    },
+                  { name: "Universal Folder", status: "Soon",     color: "bg-emerald-400" },
+                  { name: "VisionStudy",      status: "Soon",     color: "bg-lime-500"    },
+                  { name: "Songa",            status: "Soon",     color: "bg-green-400"   },
+                  { name: "Vanish",           status: "Building", color: "bg-yellow-500"  },
+                  { name: "Coin",             status: "Building", color: "bg-orange-500"  },
+                  { name: "Voice Capsule",    status: "Building", color: "bg-cyan-500"    },
                 ].map((p) => (
                   <div key={p.name} className="bg-white dark:bg-slate-800 px-3 py-2 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 flex items-center gap-2">
                     <div className={`w-2 h-2 rounded-full shrink-0 ${p.color}`} />

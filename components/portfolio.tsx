@@ -8,12 +8,15 @@ import {
 } from "lucide-react"
 
 const ventures = [
-  { n: "01", title: "KIT-IFMS", tag: "Flagship · Live", tone: "lime", description: "A financial operating system for African businesses, chamas and SACCOs—bringing savings, lending, inventory, analytics and POS into one secure ecosystem.", detail: ["Flutter", "Next.js", "Fintech"], href: "https://kit-ifms.com" },
-  { n: "02", title: "PikaNini", tag: "Food intelligence · Live", tone: "blue", description: "Meal intelligence and budget-aware recommendations that help people make informed food choices while reducing food waste.", detail: ["Product design", "AI", "Live"], href: "https://pikanini.vercel.app" },
-  { n: "03", title: "Exora", tag: "Productivity · Live", tone: "orange", description: "A discipline-building platform designed to help people stay focused and follow through on long-term goals.", detail: ["Mobile", "Systems", "Live"], href: "https://exora-focus.vercel.app/" },
-  { n: "04", title: "Universal Folder", tag: "Privacy-first storage", tone: "violet", description: "A data compression and local storage solution for efficient, privacy-first file management.", detail: ["Storage", "Compression", "Privacy"], href: "https://universal-folder.vercel.app/" },
-  { n: "05", title: "VisionStudy", tag: "Adaptive learning", tone: "mint", description: "An academic learning system that personalizes study plans with adaptive AI to improve outcomes.", detail: ["EdTech", "AI", "Learning"], href: "https://visionstudy-two.vercel.app/" },
-  { n: "06", title: "Songa", tag: "Mobility", tone: "yellow", description: "Affordable mobility connecting commuters with reliable, low-cost transport solutions.", detail: ["Transport", "Access", "Platform"], href: "https://songa-alpha.vercel.app/" },
+  { n: "01", title: "KIT IFMS", tag: "Live", tone: "lime", description: "An integrated financial management system helping businesses, Saccos, and cooperatives manage savings, lending, inventory, analytics, POS, and financial communication.", detail: ["Java", "Android", "Python", "Next.js", "Firebase", "Paystack", "MPESA", "Flutter"], href: "http://kit-ifms.com/" },
+  { n: "02", title: "PikaNini", tag: "Live", tone: "blue", description: "Helping people make smarter food decisions through meal intelligence, budget-aware choices, healthier eating, and reduced food waste.", detail: ["Flutter", "Supabase", "Next.js"], href: "https://pikanini.greenon.online/" },
+  { n: "03", title: "Exora", tag: "Live", tone: "orange", description: "A life execution platform helping people overcome procrastination, build discipline, and improve productivity.", detail: ["Flutter", "Supabase"], href: "https://exora-focus.greenon.online/" },
+  { n: "04", title: "Universal Folder", tag: "Soon", tone: "violet", description: "A new way of thinking about compression and access: fold more, fetch less, and save locally.", detail: ["Flutter", "Supabase"], href: "https://universal-folder.greenon.online/" },
+  { n: "05", title: "VisionStudy", tag: "Soon", tone: "mint", description: "A smarter learning platform designed to improve how people study, retain information, and succeed academically.", detail: ["Flutter", "Supabase"], href: "https://visionstudy.greenon.online/" },
+  { n: "06", title: "Songa", tag: "Soon", tone: "yellow", description: "A fair and affordable mobility platform focused on better experiences for both riders and drivers.", detail: ["Flutter", "Supabase"], href: "https://songa.greenon.online/" },
+  { n: "07", title: "Vanish", tag: "Building", tone: "orange", description: "A file-deletion experience that turns cleanup into a physical, satisfying moment through expressive Rive animations, sound, and haptics.", detail: ["Flutter", "Supabase"], href: "http://vanish.greenon.online/" },
+  { n: "08", title: "Coin", tag: "Building", tone: "blue", description: "A simple savings app built around a living digital jar you can shake and tap to watch your money grow.", detail: ["Flutter", "Supabase"], href: "" },
+  { n: "09", title: "Voice Capsule", tag: "Building", tone: "mint", description: "A voice time-capsule app for recording messages, sealing them away, and reopening them in the future.", detail: ["Flutter", "Supabase"], href: "" },
 ]
 
 const capabilities = [
@@ -134,7 +137,7 @@ export function Portfolio() {
         </div>
         <div className="venture-list">
           {ventures.slice(1).map((v) => (
-            <a className={`venture-card ${v.tone}`} href={v.href} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${v.title}`} key={v.title}>
+            <a className={`venture-card ${v.tone}`} href={v.href || undefined} target={v.href ? "_blank" : undefined} rel={v.href ? "noopener noreferrer" : undefined} aria-label={v.href ? `Visit ${v.title}` : `${v.title} coming soon`} key={v.title}>
               <div className="venture-meta"><span>{v.n}</span><span>{v.tag}</span></div>
               <h3>{v.title}</h3><p>{v.description}</p>
               <div className="chips">{v.detail.map(x => <span key={x}>{x}</span>)}</div>
@@ -147,7 +150,7 @@ export function Portfolio() {
 
       <section id="about" className="section-block about-new">
         <div className="section-index">02 / ABOUT</div>
-        <div className="about-statement"><p className="lead">I sit at the intersection of <em>engineering, implementation</em> and real-world impact.</p><div className="about-copy"><p>As Product Implementation Lead at Primesoft Solutions and a contributor to Greener Earth Foundation, I turn complex requirements into products people can actually use.</p><p>My work spans mobile and web development, database architecture, enterprise security and product rollout—with a focus on Africa’s financial and climate challenges.</p><a href="https://greener-earth.vercel.app/" target="_blank">Explore Greener Earth Foundation <ArrowUpRight/></a></div></div>
+        <div className="about-statement"><p className="lead">I sit at the intersection of <em>engineering, implementation</em> and real-world impact.</p><div className="about-copy"><p>As Product Implementation Lead at Primesoft Solutions and a contributor to Greenon, I turn complex requirements into products people can actually use.</p><p>My work spans mobile and web development, database architecture, enterprise security and product rollout—with a focus on Africa’s financial and climate challenges.</p><a href="https://greenon.online/" target="_blank">Explore Greenon <ArrowUpRight/></a></div></div>
         <div className="capability-grid">{capabilities.map(([n,t,d])=><article key={n}><span>{n}</span><Code2/><h3>{t}</h3><p>{d}</p></article>)}</div>
       </section>
 

@@ -15,16 +15,16 @@ const Footer = memo(function Footer() {
               <span className="font-black text-white">Tonny Kamau</span>
             </div>
             <p className="text-sm text-slate-400 leading-relaxed mb-4">
-              Software developer & implementation lead at Greener Earth Foundation — building technology that restores balance.
+              Software developer & implementation lead at Greenon — building technology that restores balance.
             </p>
             <a
-              href="https://greener-earth.vercel.app/"
+              href="https://greenon.online/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-xs font-bold text-emerald-400 hover:text-emerald-300 transition-colors"
             >
               <Leaf className="w-3 h-3" />
-              Greener Earth Foundation
+              Greenon
               <ExternalLink className="w-3 h-3 opacity-60" />
             </a>
           </div>
@@ -81,7 +81,7 @@ const Footer = memo(function Footer() {
           <p>&copy; {new Date().getFullYear()} Tonny Kamau Mwangi. All rights reserved.</p>
           <div className="flex items-center gap-1.5">
             <Leaf className="w-3 h-3 text-emerald-500" />
-            <span>Part of the Greener Earth Foundation ecosystem</span>
+            <span>Part of the Greenon ecosystem</span>
           </div>
         </div>
       </div>

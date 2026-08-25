@@ -30,13 +30,13 @@ const About = memo(function About() {
                 </p>
                 <p>
                   As a core contributor to the{" "}
-                  <a href="https://greener-earth.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 dark:text-emerald-400 font-bold underline decoration-2 underline-offset-4 hover:text-emerald-700 transition-colors">
-                    Greener Earth Foundation
+                  <a href="https://greenon.online/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 dark:text-emerald-400 font-bold underline decoration-2 underline-offset-4 hover:text-emerald-700 transition-colors">
+                    Greenon
                   </a>
                   , I believe technology should restore balance — not create more imbalance.
                 </p>
                 <p>
-                  Equipped with certifications in Cloud Security and Ethical Hacking, I bring a security-first mindset to every project — from the flagship KIT-IFMS implementation to the broader Greener Earth ecosystem.
+                  Equipped with certifications in Cloud Security and Ethical Hacking, I bring a security-first mindset to every project — from the flagship KIT-IFMS implementation to the broader Greenon ecosystem.
                 </p>
               </div>
             </ScrollReveal>
@@ -46,7 +46,7 @@ const About = memo(function About() {
                 {[
                   { icon: Shield,   color: "text-emerald-500", bg: "bg-emerald-500/10", title: "Enterprise Security",  sub: "Certified Operations"     },
                   { icon: Database, color: "text-green-500",   bg: "bg-green-500/10",   title: "DB Architecture",     sub: "Scalable Logic"           },
-                  { icon: Leaf,     color: "text-teal-500",    bg: "bg-teal-500/10",    title: "Greener Earth",       sub: "Foundation Contributor"   },
+                  { icon: Leaf,     color: "text-teal-500",    bg: "bg-teal-500/10",    title: "Greenon",             sub: "Ecosystem Contributor"   },
                   { icon: Globe,    color: "text-lime-600",    bg: "bg-lime-500/10",    title: "Cross-Platform",      sub: "Mobile & Web"             },
                 ].map(({ icon: Icon, color, bg, title, sub }) => (
                   <Card key={title} className="glass border-none rounded-2xl p-4 hover-glow transition-all duration-300">
@@ -75,10 +75,10 @@ const About = memo(function About() {
                 </div>
                 <div className="space-y-7">
                   {[
-                    { label: "Implementation Lead",  desc: "Flagship Lead for KIT-IFMS deployment & Greener Earth ecosystem architecture." },
+                    { label: "Implementation Lead",  desc: "Flagship Lead for KIT-IFMS deployment & Greenon ecosystem architecture." },
                     { label: "Systems & Security",   desc: "Cloud Defense, Network Ops, & System Lifecycle Management." },
                     { label: "Database Mastery",     desc: "High-performance MySQL, MongoDB, & Data Integrity at scale." },
-                    { label: "Mission-Driven Dev",   desc: "Building tech that restores balance — Greener Earth Foundation philosophy." },
+                    { label: "Mission-Driven Dev",   desc: "Building tech that restores balance — Greenon philosophy." },
                   ].map((item, i) => (
                     <div key={i} className="flex gap-5">
                       <div className="text-emerald-500 font-black text-xl italic opacity-40 shrink-0">0{i + 1}</div>

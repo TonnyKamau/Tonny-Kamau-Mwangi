@@ -8,57 +8,76 @@ import { GitHubRepos } from "./github-repos"
 import { ScrollReveal } from "@/components/scroll-reveal"
 import { memo } from "react"
 
-const greenerEarthProjects = [
-  {
-    title: "KIT-IFMS",
-    description: "Financial management system for businesses and cooperatives with savings, lending, inventory, analytics, and POS capabilities.",
-    technologies: ["Flutter", "Dart", "MySQL", "Next.js"],
-    status: "live",
-    link: "https://kit-ifms.com",
-    accent: "from-emerald-500 to-teal-500",
-  },
+const greenonProjects = [
   {
     title: "PikaNini",
-    description: "Helps users make informed food choices through meal intelligence and budget-aware recommendations while reducing food waste.",
-    technologies: ["React", "Node.js", "AI/ML"],
+    description: "Helping people make smarter food decisions through meal intelligence, budget-aware choices, healthier eating, and reduced food waste.",
+    technologies: ["Flutter", "Supabase", "Next.js"],
     status: "live",
-    link: "https://pikanini.vercel.app",
+    link: "https://pikanini.greenon.online/",
     accent: "from-green-500 to-emerald-500",
   },
   {
+    title: "KIT IFMS",
+    description: "An integrated financial management system helping businesses, Saccos, and cooperatives manage savings, lending, inventory, analytics, POS, and financial communication.",
+    technologies: ["Java", "Android", "Python", "Next.js", "Firebase", "Paystack", "MPESA", "Flutter"],
+    status: "live",
+    link: "http://kit-ifms.com/",
+    accent: "from-emerald-500 to-teal-500",
+  },
+  {
     title: "Exora",
-    description: "Productivity and discipline-building platform to help individuals stay focused and achieve long-term goals.",
-    technologies: ["Flutter", "Firebase"],
-    status: "coming-soon",
+    description: "A life execution platform helping people overcome procrastination, build discipline, and improve productivity.",
+    technologies: ["Flutter", "Supabase"],
+    status: "live",
+    link: "https://exora-focus.greenon.online/",
     accent: "from-teal-500 to-cyan-500",
   },
   {
     title: "Universal Folder",
-    description: "Data compression and local storage solution for efficient, privacy-first file management.",
-    technologies: ["Rust", "Flutter"],
+    description: "A new way of thinking about compression and access: fold more, fetch less, and save locally.",
+    technologies: ["Flutter", "Supabase"],
     status: "coming-soon",
+    link: "https://universal-folder.greenon.online/",
     accent: "from-green-400 to-teal-500",
   },
   {
-    title: "Rayzen",
-    description: "Vitamin D balance and sunlight wellness tracking platform for healthier daily routines.",
-    technologies: ["Flutter", "Health APIs"],
-    status: "coming-soon",
-    accent: "from-yellow-400 to-lime-500",
-  },
-  {
     title: "VisionStudy",
-    description: "Academic learning optimization system personalizing study plans using adaptive AI to improve outcomes.",
-    technologies: ["AI/ML", "React", "Node.js"],
+    description: "A smarter learning platform designed to improve how people study, retain information, and succeed academically.",
+    technologies: ["Flutter", "Supabase"],
     status: "coming-soon",
+    link: "https://visionstudy.greenon.online/",
     accent: "from-indigo-400 to-blue-500",
   },
   {
     title: "Songa",
-    description: "Affordable mobility platform connecting commuters to reliable, low-cost transport solutions.",
-    technologies: ["Flutter", "Maps", "Firebase"],
+    description: "A fair and affordable mobility platform focused on better experiences for both riders and drivers.",
+    technologies: ["Flutter", "Supabase"],
     status: "coming-soon",
+    link: "https://songa.greenon.online/",
     accent: "from-orange-400 to-amber-500",
+  },
+  {
+    title: "Vanish",
+    description: "A file-deletion experience that turns cleanup into a physical, satisfying moment through expressive Rive animations, sound, and haptics.",
+    technologies: ["Flutter", "Supabase"],
+    status: "in-dev",
+    link: "http://vanish.greenon.online/",
+    accent: "from-yellow-400 to-lime-500",
+  },
+  {
+    title: "Coin",
+    description: "A simple savings app built around a living digital jar you can shake and tap to watch your money grow.",
+    technologies: ["Flutter", "Supabase"],
+    status: "in-dev",
+    accent: "from-orange-400 to-amber-500",
+  },
+  {
+    title: "Voice Capsule",
+    description: "A voice time-capsule app for recording messages, sealing them away, and reopening them in the future.",
+    technologies: ["Flutter", "Supabase"],
+    status: "in-dev",
+    accent: "from-cyan-400 to-blue-500",
   },
 ]
 
@@ -103,18 +122,18 @@ const Projects = memo(function Projects() {
             Engineering <span className="text-gradient">Solutions</span>
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto font-medium">
-            Digital products built under the Greener Earth Foundation ecosystem and personal projects — all driven by the mission to restore balance through technology.
+            Digital products built under the Greenon ecosystem and personal projects — all driven by the mission to restore balance through technology.
           </p>
         </ScrollReveal>
 
-        {/* Greener Earth Ecosystem */}
+        {/* Greenon Projects */}
         <div className="mb-24">
           <div className="flex flex-wrap items-center gap-3 mb-10">
             <div className="p-2 rounded-xl bg-emerald-100 dark:bg-emerald-900/30 shrink-0">
               <Leaf className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
             </div>
-            <h3 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">Greener Earth Foundation Ecosystem</h3>
-            <a href="https://greener-earth.vercel.app/" target="_blank" rel="noopener noreferrer" className="sm:ml-auto">
+            <h3 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">Greenon Ecosystem</h3>
+            <a href="https://greenon.online/" target="_blank" rel="noopener noreferrer" className="sm:ml-auto">
               <Button variant="outline" size="sm" className="rounded-full border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 font-bold text-xs">
                 Visit Foundation
                 <ExternalLink className="ml-2 w-3 h-3" />
@@ -123,7 +142,7 @@ const Projects = memo(function Projects() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {greenerEarthProjects.map((project, i) => {
+            {greenonProjects.map((project, i) => {
               const status = statusConfig[project.status as keyof typeof statusConfig]
               return (
                 <ScrollReveal key={i} variant="fade-up" delay={i * 60}>
@@ -136,7 +155,7 @@ const Projects = memo(function Projects() {
                         <Badge className={`${status.color} border-none text-[10px] font-bold uppercase tracking-wide`}>
                           {status.label}
                         </Badge>
-                        {project.status === "live" && project.link ? (
+                        {project.link ? (
                           <a href={project.link} target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="w-4 h-4 text-emerald-500 hover:text-emerald-700 transition-colors" />
                           </a>
