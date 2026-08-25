@@ -174,6 +174,7 @@ export function Hero() {
                 {[
                   { name: "KIT IFMS",         status: "Live",     color: "bg-emerald-500" },
                   { name: "PikaNini",         status: "Live",     color: "bg-green-500"   },
+                  { name: "Kipepeo Business", status: "Live",    color: "bg-cyan-500"    },
                   { name: "Exora",            status: "Live",     color: "bg-teal-400"    },
                   { name: "Universal Folder", status: "Soon",     color: "bg-emerald-400" },
                   { name: "VisionStudy",      status: "Soon",     color: "bg-lime-500"    },

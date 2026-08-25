@@ -26,6 +26,14 @@ const greenonProjects = [
     accent: "from-emerald-500 to-teal-500",
   },
   {
+    title: "Kipepeo Business",
+    description: "A business operating system for African trade and service companies, connecting sales, stock, finance, payments, tax, and field operations.",
+    technologies: ["Flutter", "Supabase"],
+    status: "live",
+    link: "https://kipepeobusiness.greenon.online/",
+    accent: "from-cyan-500 to-blue-500",
+  },
+  {
     title: "Exora",
     description: "A life execution platform helping people overcome procrastination, build discipline, and improve productivity.",
     technologies: ["Flutter", "Supabase"],
