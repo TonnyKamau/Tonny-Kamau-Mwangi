@@ -11,6 +11,7 @@ import { memo } from "react"
 const greenonProjects = [
   {
     title: "PikaNini",
+    role: "Founder",
     description: "Helping people make smarter food decisions through meal intelligence, budget-aware choices, healthier eating, and reduced food waste.",
     technologies: ["Flutter", "Supabase", "Next.js"],
     status: "live",
@@ -18,7 +19,17 @@ const greenonProjects = [
     accent: "from-green-500 to-emerald-500",
   },
   {
+    title: "Fixi",
+    role: "Co-Founder",
+    description: "A trusted local services marketplace connecting households and businesses with verified plumbers, electricians, cleaners, and handymen across Kenya.",
+    technologies: ["Flutter", "Supabase", "Next.js", "M-PESA"],
+    status: "live",
+    link: "https://fixi.greenon.online/",
+    accent: "from-cyan-500 to-sky-500",
+  },
+  {
     title: "KIT IFMS",
+    role: "CTO",
     description: "An integrated financial management system helping businesses, Saccos, and cooperatives manage savings, lending, inventory, analytics, POS, and financial communication.",
     technologies: ["Java", "Android", "Python", "Next.js", "Firebase", "Paystack", "MPESA", "Flutter"],
     status: "live",
@@ -27,6 +38,7 @@ const greenonProjects = [
   },
   {
     title: "Kipepeo Business",
+    role: "Founder",
     description: "A business operating system for African trade and service companies, connecting sales, stock, finance, payments, tax, and field operations.",
     technologies: ["Flutter", "Supabase"],
     status: "live",
@@ -35,6 +47,7 @@ const greenonProjects = [
   },
   {
     title: "Exora",
+    role: "Founder",
     description: "A life execution platform helping people overcome procrastination, build discipline, and improve productivity.",
     technologies: ["Flutter", "Supabase"],
     status: "live",
@@ -43,6 +56,7 @@ const greenonProjects = [
   },
   {
     title: "Universal Folder",
+    role: "Founder",
     description: "A new way of thinking about compression and access: fold more, fetch less, and save locally.",
     technologies: ["Flutter", "Supabase"],
     status: "coming-soon",
@@ -51,6 +65,7 @@ const greenonProjects = [
   },
   {
     title: "VisionStudy",
+    role: "Founder",
     description: "A smarter learning platform designed to improve how people study, retain information, and succeed academically.",
     technologies: ["Flutter", "Supabase"],
     status: "coming-soon",
@@ -59,6 +74,7 @@ const greenonProjects = [
   },
   {
     title: "Songa",
+    role: "Co-Founder",
     description: "A fair and affordable mobility platform focused on better experiences for both riders and drivers.",
     technologies: ["Flutter", "Supabase"],
     status: "coming-soon",
@@ -67,6 +83,7 @@ const greenonProjects = [
   },
   {
     title: "Vanish",
+    role: "Founder",
     description: "A file-deletion experience that turns cleanup into a physical, satisfying moment through expressive Rive animations, sound, and haptics.",
     technologies: ["Flutter", "Supabase"],
     status: "in-dev",
@@ -75,6 +92,7 @@ const greenonProjects = [
   },
   {
     title: "Coin",
+    role: "Founder",
     description: "A simple savings app built around a living digital jar you can shake and tap to watch your money grow.",
     technologies: ["Flutter", "Supabase"],
     status: "in-dev",
@@ -82,6 +100,7 @@ const greenonProjects = [
   },
   {
     title: "Voice Capsule",
+    role: "Founder",
     description: "A voice time-capsule app for recording messages, sealing them away, and reopening them in the future.",
     technologies: ["Flutter", "Supabase"],
     status: "in-dev",
@@ -170,6 +189,9 @@ const Projects = memo(function Projects() {
                         ) : (
                           <Clock className="w-4 h-4 text-slate-300" />
                         )}
+                      </div>
+                      <div className="mb-2">
+                        <span className="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-2 py-1 text-[9px] font-black uppercase tracking-[0.18em] text-emerald-700 dark:border-emerald-800 dark:bg-emerald-900/20 dark:text-emerald-300">{project.role}</span>
                       </div>
                       <h3 className="text-lg font-black text-slate-900 dark:text-white mb-2">{project.title}</h3>
                       <p className="text-slate-600 dark:text-slate-300 text-sm font-medium leading-relaxed mb-4 flex-grow">{project.description}</p>

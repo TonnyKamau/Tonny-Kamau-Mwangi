@@ -8,16 +8,17 @@ import {
 } from "lucide-react"
 
 const ventures = [
-  { n: "01", title: "KIT IFMS", tag: "Live", tone: "lime", description: "An integrated financial management system helping businesses, Saccos, and cooperatives manage savings, lending, inventory, analytics, POS, and financial communication.", detail: ["Java", "Android", "Python", "Next.js", "Firebase", "Paystack", "MPESA", "Flutter"], href: "http://kit-ifms.com/" },
-  { n: "02", title: "PikaNini", tag: "Live", tone: "blue", description: "Helping people make smarter food decisions through meal intelligence, budget-aware choices, healthier eating, and reduced food waste.", detail: ["Flutter", "Supabase", "Next.js"], href: "https://pikanini.greenon.online/" },
-  // { n: "03", title: "Kipepeo Business", tag: "Live", tone: "mint", description: "A business operating system for African trade and service companies, connecting sales, stock, finance, payments, tax, and field operations.", detail: ["Flutter", "Supabase"], href: "https://kipepeobusiness.greenon.online/" },
-  { n: "04", title: "Exora", tag: "Live", tone: "orange", description: "A life execution platform helping people overcome procrastination, build discipline, and improve productivity.", detail: ["Flutter", "Supabase"], href: "https://exora-focus.greenon.online/" },
-  { n: "05", title: "Universal Folder", tag: "Soon", tone: "violet", description: "A new way of thinking about compression and access: fold more, fetch less, and save locally.", detail: ["Flutter", "Supabase"], href: "https://universal-folder.greenon.online/" },
-  { n: "06", title: "VisionStudy", tag: "Soon", tone: "mint", description: "A smarter learning platform designed to improve how people study, retain information, and succeed academically.", detail: ["Flutter", "Supabase"], href: "https://visionstudy.greenon.online/" },
-  { n: "07", title: "Songa", tag: "Soon", tone: "yellow", description: "A fair and affordable mobility platform focused on better experiences for both riders and drivers.", detail: ["Flutter", "Supabase"], href: "https://songa.greenon.online/" },
-  { n: "08", title: "Vanish", tag: "Building", tone: "orange", description: "A file-deletion experience that turns cleanup into a physical, satisfying moment through expressive Rive animations, sound, and haptics.", detail: ["Flutter", "Supabase"], href: "http://vanish.greenon.online/" },
-  { n: "09", title: "Coin", tag: "Building", tone: "blue", description: "A simple savings app built around a living digital jar you can shake and tap to watch your money grow.", detail: ["Flutter", "Supabase"], href: "" },
-  { n: "10", title: "Voice Capsule", tag: "Building", tone: "mint", description: "A voice time-capsule app for recording messages, sealing them away, and reopening them in the future.", detail: ["Flutter", "Supabase"], href: "" },
+  { n: "01", title: "KIT IFMS", role: "CTO", tag: "Live", tone: "lime", description: "An integrated financial management system helping businesses, Saccos, and cooperatives manage savings, lending, inventory, analytics, POS, and financial communication.", detail: ["Java", "Android", "Python", "Next.js", "Firebase", "Paystack", "MPESA", "Flutter"], href: "http://kit-ifms.com/" },
+  { n: "02", title: "PikaNini", role: "Founder", tag: "Live", tone: "blue", description: "Helping people make smarter food decisions through meal intelligence, budget-aware choices, healthier eating, and reduced food waste.", detail: ["Flutter", "Supabase", "Next.js"], href: "https://pikanini.greenon.online/" },
+  { n: "03", title: "Fixi", role: "Co-Founder", tag: "Live", tone: "cyan", description: "A trusted local services marketplace connecting households and businesses with verified plumbers, electricians, cleaners, and handymen across Kenya.", detail: ["Flutter", "Supabase", "Next.js", "M-PESA"], href: "https://fixi.greenon.online/" },
+  // { n: "04", title: "Kipepeo Business", role: "Founder", tag: "Live", tone: "mint", description: "A business operating system for African trade and service companies, connecting sales, stock, finance, payments, tax, and field operations.", detail: ["Flutter", "Supabase"], href: "https://kipepeobusiness.greenon.online/" },
+  { n: "05", title: "Exora", role: "Founder", tag: "Live", tone: "orange", description: "A life execution platform helping people overcome procrastination, build discipline, and improve productivity.", detail: ["Flutter", "Supabase"], href: "https://exora-focus.greenon.online/" },
+  { n: "06", title: "Universal Folder", role: "Founder", tag: "Soon", tone: "violet", description: "A new way of thinking about compression and access: fold more, fetch less, and save locally.", detail: ["Flutter", "Supabase"], href: "https://universal-folder.greenon.online/" },
+  { n: "07", title: "VisionStudy", role: "Founder", tag: "Soon", tone: "mint", description: "A smarter learning platform designed to improve how people study, retain information, and succeed academically.", detail: ["Flutter", "Supabase"], href: "https://visionstudy.greenon.online/" },
+  { n: "08", title: "Songa", role: "Co-Founder", tag: "Soon", tone: "yellow", description: "A fair and affordable mobility platform focused on better experiences for both riders and drivers.", detail: ["Flutter", "Supabase"], href: "https://songa.greenon.online/" },
+  { n: "09", title: "Vanish", role: "Founder", tag: "Building", tone: "orange", description: "A file-deletion experience that turns cleanup into a physical, satisfying moment through expressive Rive animations, sound, and haptics.", detail: ["Flutter", "Supabase"], href: "http://vanish.greenon.online/" },
+  { n: "10", title: "Coin", role: "Founder", tag: "Building", tone: "blue", description: "A simple savings app built around a living digital jar you can shake and tap to watch your money grow.", detail: ["Flutter", "Supabase"], href: "" },
+  { n: "11", title: "Voice Capsule", role: "Founder", tag: "Building", tone: "mint", description: "A voice time-capsule app for recording messages, sealing them away, and reopening them in the future.", detail: ["Flutter", "Supabase"], href: "" },
 ]
 
 const capabilities = [
@@ -139,7 +140,11 @@ export function Portfolio() {
         <div className="venture-list">
           {ventures.slice(1).map((v) => (
             <a className={`venture-card ${v.tone}`} href={v.href || undefined} target={v.href ? "_blank" : undefined} rel={v.href ? "noopener noreferrer" : undefined} aria-label={v.href ? `Visit ${v.title}` : `${v.title} coming soon`} key={v.title}>
-              <div className="venture-meta"><span>{v.n}</span><span>{v.tag}</span></div>
+              <div className="venture-meta flex items-center gap-2 flex-wrap">
+                <span>{v.n}</span>
+                <span className="inline-flex rounded-full border border-current/15 bg-white/5 px-2 py-1 text-[8px] font-black uppercase tracking-[0.18em] text-current/80">{v.role}</span>
+                <span>{v.tag}</span>
+              </div>
               <h3>{v.title}</h3><p>{v.description}</p>
               <div className="chips">{v.detail.map(x => <span key={x}>{x}</span>)}</div>
               <ArrowUpRight className="venture-arrow" />
