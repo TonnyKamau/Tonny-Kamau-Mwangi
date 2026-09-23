@@ -115,7 +115,7 @@ export function Portfolio() {
       </header>
 
       <section id="top" className="hero-new">
-        <div className="hero-kicker"><span className="status-dot"/> Available for collaboration & hiring</div>
+        <div className="hero-kicker"><span className="status-dot"/> Available for collaboration</div>
         <h1>I build digital<br/>systems that <em>move</em><br/>ideas forward.</h1>
         <div className="hero-bottom">
           <div className="portrait-wrap"><Image src="/images/profile.jpg" alt="Tonny Kamau Mwangi" fill priority sizes="(max-width: 700px) 42vw, 210px"/></div>
