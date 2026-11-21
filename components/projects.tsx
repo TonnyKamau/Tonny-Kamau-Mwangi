@@ -64,15 +64,6 @@ const greenonProjects = [
     accent: "from-green-400 to-teal-500",
   },
   {
-    title: "VisionStudy",
-    role: "Founder",
-    description: "A smarter learning platform designed to improve how people study, retain information, and succeed academically.",
-    technologies: ["Flutter", "Supabase"],
-    status: "coming-soon",
-    link: "https://visionstudy.greenon.online/",
-    accent: "from-indigo-400 to-blue-500",
-  },
-  {
     title: "Songa",
     role: "Co-Founder",
     description: "A fair and affordable mobility platform focused on better experiences for both riders and drivers.",

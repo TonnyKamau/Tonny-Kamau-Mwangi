@@ -177,7 +177,6 @@ export function Hero() {
                   { name: "Kipepeo Business", status: "Live",    color: "bg-cyan-500"    },
                   { name: "Exora",            status: "Live",     color: "bg-teal-400"    },
                   { name: "Universal Folder", status: "Soon",     color: "bg-emerald-400" },
-                  { name: "VisionStudy",      status: "Soon",     color: "bg-lime-500"    },
                   { name: "Songa",            status: "Soon",     color: "bg-green-400"   },
                   { name: "Vanish",           status: "Building", color: "bg-yellow-500"  },
                   { name: "Coin",             status: "Building", color: "bg-orange-500"  },
